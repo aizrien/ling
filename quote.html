@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="register.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Your Order</title>
+    <style>
+        /* Add custom styles here */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .order-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .order-container h1 {
+            font-family: 'Lobster', cursive;
+            text-align: center;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: maroon;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            margin-right: 10px;
+            width: 100%;
+            font-size: 16px;
+            transition: background-color 0.3s; /* Smooth transition for hover effect */
+        }
+        .btn:hover {
+            background-color: #800000; /* Darker shade of maroon */
+        }
+    </style>
+    <script>
+        // Function to animate form elements using anime.js
+        function animateForm() {
+            anime({
+                targets: '.order-container',
+                translateY: [-50, 0],
+                opacity: [0, 1],
+                duration: 1000,
+                easing: 'easeOutBounce'
+            });
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            animateForm();
+        });
+    </script>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center" style="font-family: 'Lobster', cursive;">Place Your Order Now!</h1>
+    <div class="order-container">
+        <form id="quote-form" action="add_quote.php" method="post" onsubmit="return validateForm()">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" class="form-control" id="first-name" name="firstName" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" class="form-control" id="last-name" name="lastName" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="emailmember">Email:</label>
+                    <input type="email" class="form-control" id="emailmember" name="emailmember" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="address">Address:</label>
+                    <input type="text" class="form-control" id="address" name="address" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="brand">Vehicle Brand:</label>
+                    <select name="brand" id="brand" class="form-control" required>
+                        <option value="">Select Vehicle Brand</option>
+                        <option value="Volvo XC90 Estate">Volvo XC90 Estate</option>
+                        <option value="Peugeot 208">Peugeot 208</option>
+                        <option value="BMW 1 Series">BMW 1 Series</option>
+                        <option value="Vauxhall Corsa">Vauxhall Corsa</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="model">Vehicle Model:</label>
+                    <select name="model" id="model" class="form-control" required>
+                        <option value="">Select Vehicle Model</option>
+                        <option value="S2.0 B5D Plus Dark (235bhp) Estate">S2.0 B5D Plus Dark (235bhp) Estate</option>
+                        <option value="1.2 PureTech 100 Allure (101.39bhp)">1.2 PureTech 100 Allure (101.39bhp)</option>
+                        <option value="118i M Sport (LCP) (136bhp)">118i M Sport (LCP) (136bhp)</option>
+                        <option value="1.2 SE Edition (75bhp) Hatchback">1.2 SE Edition (75bhp) Hatchback</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="spec">Vehicle Spec:</label>
+                    <select name="spec" id="spec" class="form-control" required>
+                        <option value="">Select Vehicle Spec</option>
+                        <option value="5dr Diesel AWD Geartronic (235bhp) (Brand New)">5dr Diesel AWD Geartronic (235bhp) (Brand New)</option>
+                        <option value="Hatchback 5dr Petrol Manual (101.39bhp) (Brand New)">Hatchback 5dr Petrol Manual (101.39bhp) (Brand New)</option>
+                        <option value="Hatchback 5dr Petrol Step Auto (136bhp) (Brand New)">Hatchback 5dr Petrol Step Auto (136bhp) (Brand New)</option>
+                        <option value="5dr Petrol Manual (75bhp) (Used)">5dr Petrol Manual (75bhp) (Used)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="price">Vehicle Price:</label>
+                    <select name="price" id="price" class="form-control" required>
+                        <option value="">Select Vehicle Price</option>
+                        <option value="$991/mth (incl VAT)">$991/mth (incl VAT)</option>
+                        <option value="$631/mth (incl VAT)">$631/mth (incl VAT)</option>
+                        <option value="$559/mth (incl VAT)">$559/mth (incl VAT)</option>
+                        <option value="$322/mth (incl VAT)">$322/mth (incl VAT)</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="arrivaldate">Preferred Date:</label>
+                    <input type="date" class="form-control" id="arrivaldate" name="arrivaldate" required>
+                </div>
+            </div>
+            <!-- Hidden input to store memberID (optional) -->
+            <input type="hidden" id="memberID" name="memberID" value="1">
+
+            <button type="submit" class="btn">Submit Order</button>
+
+            <div class="btn-container mt-3">
+                <a href="dashboardmember.html" class="btn">&laquo; Back to Menu</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    function validateForm() {
+        var firstName = document.getElementById("first-name").value;
+        var lastName = document.getElementById("last-name").value;
+        var emailmember = document.getElementById("emailmember").value;
+        var phone = document.getElementById("phone").value;
+        var address = document.getElementById("address").value;
+        var brand = document.getElementById("brand").value;
+        var model = document.getElementById("model").value;
+        var spec = document.getElementById("spec").value;
+        var price = document.getElementById("price").value;
+        var arrivaldate = document.getElementById("arrivaldate").value;
+
+        if (firstName === "" || lastName === "" || emailmember === "" || phone === "" || address === "" ||
+            brand === "" || model === "" || spec === "" || price === "" || arrivaldate === "") {
+            alert("All fields must be filled out");
+            return false;
+        }
+        return true;
+    }
+
+    function submitForm() {
+        if (!validateForm()) {
+            return false; // Prevent form submission if validation fails
+        }
+
+        var formData = new FormData(document.getElementById('quote-form'));
+
+        fetch('add_quote.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.text();
+        })
+        .then(data => {
+            console.log('Data sent to add_quote.php:', data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+        return false; // Prevent default form submission
+    }
+</script>
+</body>
+</html>

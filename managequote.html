@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Customer Quotations</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Styling for the quotation review section */
+        #quotation-list {
+            margin-top: 20px;
+            border-top: 2px solid #ccc;
+            padding-top: 20px;
+        }
+
+        .quotation-item {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Logo image -->
+        <img src="logo1.png" alt="Logo" class="logo" width="100" height="100">
+
+   <a href="admin.html">Dashboard</a>
+        <a href="vehiclespecadmin.html">Vehicle Specifications</a>
+        <a href="keyinfoadmin.html">Key Information</a>
+        <a href="contactadmin.html">Contact Us</a>
+	    <a href="adminlistings.html">Add Listing</a>
+	    <a href="dashboard.html">Log Out</a>
+    </nav>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Main content -->
+        <main>
+		<br><br><br>
+            <h1>Review Customer Quotations</h1>
+
+            <!-- Section for admin to review entered quotations -->
+            <div id="quotation-list">
+                <!-- The entered quotations will be displayed here -->
+            </div>
+
+        </main>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Example data - replace with your data source
+        const quotations = [
+            {
+                firstName: 'Chong',
+                lastName: 'Lee Huan',
+                email: 'chongLH@gmail.com',
+                phoneNumber: '019-4779830',
+                address: '56 Price Shoals, Campbellton',
+				vehicle: 'Volvo XC90 Estate'
+            },
+            {
+                firstName: 'Jane',
+                lastName: 'Victoria',
+                email: 'jane.vic@gmail.com',
+                phoneNumber: '012-88556023',
+                address: 'Studio 70 Max Rapid, Port Rowena',
+				vehicle: 'Vauxhall Corsa'
+            }
+        ];
+
+        // Function to display the list of quotations
+        function displayQuotations() {
+            const quotationList = document.getElementById('quotation-list');
+            quotationList.innerHTML = ''; // Clear existing content
+
+            // Iterate through the quotations array and display each quotation
+            quotations.forEach((quotation, index) => {
+                const quotationItem = document.createElement('div');
+                quotationItem.className = 'quotation-item';
+
+                // Display quotation details
+                quotationItem.innerHTML = `
+                    <p><strong>First Name:</strong> ${quotation.firstName}</p>
+                    <p><strong>Last Name:</strong> ${quotation.lastName}</p>
+                    <p><strong>Email:</strong> ${quotation.email}</p>
+                    <p><strong>Phone Number:</strong> ${quotation.phoneNumber}</p>
+                    <p><strong>Address:</strong> ${quotation.address}</p>
+					<p><strong>Vehicle Requested:</strong> ${quotation.vehicle}</p>
+                `;
+
+                // Append the quotation item to the list
+                quotationList.appendChild(quotationItem);
+            });
+        }
+
+        // Call the function to display the quotations on page load
+        window.onload = function() {
+            displayQuotations();
+        };
+    </script>
+</body>
+
+</html>

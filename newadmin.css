@@ -1,0 +1,251 @@
+/* External CSS file for the Admin Dashboard */
+
+/* Overall layout */
+
+body {
+    background-image: url('bgnew.jpg'); /* Specify the image path */
+    background-size: cover; /* Cover the entire body with the image */
+    background-attachment: fixed;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+    margin: 0;
+    padding: 0; /* Reset default padding */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Center the layout horizontally */
+    align-items: center; /* Center the layout vertically */
+    min-height: 100vh; /* Ensure full viewport height */
+    background-color: #d3d3d3; /* Light gray background for the body */
+}
+
+
+/* Container */
+.container {
+    display: flex;
+    width: 80%; /* Adjust width for centered design */
+    max-width: 1200px;
+    background-color: white; /* White background for the container */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+/* Slideshow Container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px; /* Adjust max-width as per your preference */
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Slide */
+.slide {
+    display: none;
+    position: relative; /* Changed to relative */
+    width: 100%; /* Fill the container */
+}
+
+/* Image */
+.slide img {
+    width: 100%; /* Fill the slide */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Dots */
+.dots {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+
+
+
+/* Navigation Bar */
+nav {
+    background-color: #8B0000; /* Darker maroon for the navigation bar */
+    color: white;
+    padding: 2px 20px; /* Add padding for spacing */
+    text-align: center; /* Center the navigation links */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    position: fixed; /* Fixed position to keep it at the top */
+    top: 0; /* Place it at the top */
+    width: 75%; /* Make it span the full width of the page */
+    z-index: 1000; /* Ensure it stays on top */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space between elements in the navigation bar */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo styling */
+nav .logo {
+    width: 150px; /* Adjust logo width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Margin to separate logo from links */
+	margin-left: 20px;
+}
+
+/* Navigation Links */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* Add spacing between links */
+    font-size: 18px;
+    border-radius: 5px; /* Rounded corners for links */
+    padding: 10px;
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #9B1B1B; /* Darker maroon on hover */
+    transform: scale(1.3); /* Enlarge text size on hover */
+}
+
+/* Main content */
+main {
+    padding: 100px; /* Increased padding for more white space */
+    flex-grow: 1;
+    box-sizing: border-box;
+    font-size: 18px; /* Increased font size */
+    background-color: #f8f8f8; /* Light gray background for main content */
+}
+
+/* Footer */
+footer {
+    background-color: #800000; /* Maroon color */
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 16px;
+    border-top: 1px solid #8B0000; /* Subtle border to separate footer */
+}
+    body {
+	background-image: url('bgnew.jpg'); /* Specify the image path */
+    background-size: cover; /* Cover the entire body with the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .login-fields {
+      display: none; /* Hide the login fields by default */
+    }
+
+    /* Toggle Switch Styles */
+    .toggle-switch {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .toggle-switch input { 
+      display: none;
+    }
+
+    .toggle-switch label {
+      display: inline-block;
+      width: 175px;
+      height: 34px;
+      background-color: #ccc;
+      border-radius: 34px;
+      position: relative;
+      cursor: pointer;
+      text-align: center;
+      line-height: 34px;
+      padding: 4px; /* Adjust padding to center the switch */
+      transition: background-color 0.4s;
+    }
+
+    .toggle-switch label:before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 34px;
+      background-color: white;
+      border-radius: 34px;
+      left: 0;
+      transition: 0.4s;
+      z-index: -1; /* Push it behind the label */
+    }
+
+    .toggle-switch input:checked + label:before {
+      transform: translateX(60px);
+    }
+
+    .toggle-switch input:checked + label {
+      background-color: #2196F3; /* Change color for login state */
+    }
+
+    .toggle-switch input:not(:checked) + label {
+      background-color: #8a2be2; /* Change color for register state */
+    }
+
+    /* Show the dropdown menu on hover */
+    .toggle-switch input:not(:checked) + label:hover:before {
+      transform: translateX(60px);
+    }

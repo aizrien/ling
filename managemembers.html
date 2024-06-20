@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="manipulation.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="admin.html">
+            <img src="logo1.png" alt="Logo" class="logo" width="50" height="50"
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+		<a href="admin.html">Dashboard</a>
+        <a href="vehiclespecadmin.html">Vehicle Specifications</a>
+        <a href="keyinfoadmin.html">Key Information</a>
+        <a href="contactadmin.html">Contact Us</a>
+        <a href="listings.html">Listing</a>
+		<a href="managemembers.html">Manage Member</a>
+		<a href="managequotes.html">Quote</a>
+        <a href="index.html" onclick="logout()">Log Out</a>
+        </div>
+    </nav>
+    <main>
+      <h2>Welcome Back, Administrator!</h2>
+      <p> Make sure you have the ID's before editing!  </p>
+
+      <div class="button-container">
+      
+        <a href="addmember.html" class="spec-button">Create Member</a>
+        <a href="updatemember.html" class="spec-button">Update Member</a>
+		<a href="deletemember.html" class="spec-button">Delete Member</a>
+		<a href="displaymember.php" class="spec-button">Display Member</a>
+
+      </div>
+
+
+    </main>
+  </div>
+
+   <footer>
+    &copy; 2024 Admin Dashboard. All rights reserved.
+  </footer>
+  
+		<script>
+    function logout() {
+        // Display a pop-up message
+        alert("You have been logged out.");
+    }
+	function navigateToCategory(selectElement) {
+            // Get the selected category
+            var selectedCategory = selectElement.value;
+
+            // Redirect to the selected category
+            window.location.hash = selectedCategory;
+        }
+		 function logout() {
+        alert("You have been logged out.");
+        window.location.href = "dashboard.html"; // Redirect to login page
+    }
+	</script>
+</body>
+
+</html>

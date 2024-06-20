@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message</title>
+    <link rel="stylesheet" href="keyinfo.css"> 
+    <style>
+        /* Additional styles specific to message page */
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .message {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .message h2 {
+            color: #800000;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .message p {
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .timestamp {
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Logo image -->
+        <img src="logo1.png" alt="Logo" class="logo" width="150">
+
+        <!-- Links for direct navigation -->
+        <a href="dashboardmember.html">Dashboard</a>
+        <a href="vehiclespecmember.html">Vehicle Specifications</a>
+        <a href="keyinfomember.html">Key Information</a>
+        <a href="contactmember.html">Contact Us</a>
+        <a href="quote.html">Quote</a>
+        <a href="notification.html">Notifications</a> 
+        <a href="profile.html">Account Profile</a>
+        <a href="inbox.html">Inbox</a>
+        <a href="dashboard.html" onclick="logout()">Log Out</a>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        <div class="message"><br><br><br><br><br><br><br><br><br><br><br><br>
+            <h2>New Message from Ling's Cars</h2>
+            <p>Hi there! You have received a new message regarding your recent quote request. Please find the details below:</p>
+		  <p><strong>Subject:</strong> Latest Quote Request</p>
+            <p><strong>From:</strong> Ling's Cars Customer Support</p>
+            <p><strong>Date:</strong> June 1, 2024</p>
+            <hr>
+            <p>Hello,</p>
+            <p>We are pleased to inform you that your quote has been received and is being processed by our team.</p>
+			
+			<p> Full Name: <strong>Siti Zubaidah</strong> </p>
+			<p> Email: <strong>szasaturn@gmail.com</strong> </p>
+			<p> Phone: <strong>0146865960</strong> </p>
+			<p> Address: <strong>88 Rising Sunny Hills, Los Angeles</strong> </p>
+			<p> Vehicle Brand Chosen: <strong> Vauxhall Corsa </strong> </p>
+			<p> Vehicle Model Chosen: <strong> 118i M Sport (LCP)(136bhp) </strong></p>
+			<p> Vehicle Spec Chosen: <strong> 5dr Petrol Manual (75bhp)(Used) </strong></p>
+			<p> Vehicle Price Chosen: <strong> $991/mth (incl VAT) </strong></p>
+            <span class="timestamp">2 minutes ago</span>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Member Dashboard. All rights reserved.
+    </footer>
+
+    <!-- JavaScript to handle logout -->
+    <script>
+        function logout() {
+            alert("You have been logged out.");
+        }
+    </script>
+</body>
+</html>

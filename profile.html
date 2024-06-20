@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Profile</title>
+    <link rel="stylesheet" href="keyinfo.css"> <!-- Link to your CSS file -->
+    <style>
+        /* Styles for profile page */
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #800000;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-info {
+            margin-bottom: 20px;
+        }
+
+        .profile-info label {
+            font-weight: bold;
+        }
+
+        .profile-info p {
+            margin: 5px 0;
+        }
+
+        .button-container {
+            text-align: center;
+        }
+
+        .edit-button {
+            background-color: #A24857; /* Maroon */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .edit-button:hover {
+            background-color: #9B1B1B; /* Darker Maroon on hover */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Logo image -->
+        <img src="logo1.png" alt="Logo" class="logo" width="150">
+
+        <!-- Links for direct navigation -->
+        <a href="dashboardmember.html">Dashboard</a>
+        <a href="vehiclespecmember.html">Vehicle Specifications</a>
+        <a href="keyinfomember.html">Key Information</a>
+        <a href="contactmember.html">Contact Us</a>
+        <a href="quote.html">Quote</a>
+        <a href="notification.html">Notifications</a>
+        <a href="profile.html">Account Profile</a> <!-- Current page link -->
+        <a href="inbox.html">Inbox</a>
+        <a href="dashboard.html" onclick="logout()">Log Out</a>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        <h1>Account Profile</h1>
+     
+        <div class="profile-info">
+            <label for="email">Email:</label>
+            <p>szasaturn@gmail.com</p>
+        </div>
+		
+        <div class="profile-info">
+            <label for="type">Account Type:</label>
+            <p>Active Member</p>
+        </div>
+        <div class="button-container">
+            <button class="edit-button">Edit Profile</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Member Dashboard. All rights reserved.
+    </footer>
+
+    <!-- JavaScript to handle logout -->
+    <script>
+        function logout() {
+            alert("You have been logged out.");
+        }
+    </script>
+</body>
+
+</html>

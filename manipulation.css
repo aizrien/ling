@@ -1,0 +1,241 @@
+/* External CSS file for the Admin Dashboard */
+
+/* Overall layout */
+
+body {
+    background-image: url('bgnew.jpg'); /* Specify the image path */
+    background-size: cover; /* Cover the entire body with the image */
+    background-attachment: fixed;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+    margin: 0;
+    padding: 0; /* Reset default padding */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* Center the layout horizontally */
+    align-items: center; /* Center the layout vertically */
+    min-height: 100vh; /* Ensure full viewport height */
+    background-color: #d3d3d3; /* Light gray background for the body */
+	width: 100%;
+    position: fixed;
+    top: 50%; /* Set top position to center */
+    left: 50%; /* Set left position to center */
+    transform: translate(-50%, -50%); /* Center the element */
+    height: 90%;
+    border-radius: 20px; /* Set the border radius */
+  
+}
+
+
+/* Container */
+.container {
+    display: flex;
+    width: 100%; /* Adjust width for centered design */
+    max-width: 1200px;
+    background-color: white; /* White background for the container */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Header */
+header {
+    background-color: #800000; /* Maroon color */
+    color: white;
+    padding: 15px; /* Increased padding */
+    text-align: center;
+    font-size: 24px; /* Increased font size */
+    border-bottom: 1px solid #800000; /* Subtle border to separate header */
+}
+
+
+/* Navigation Bar */
+nav {
+    background-color: #8B0000; /* Darker maroon for the navigation bar */
+    color: white;
+    padding: 2px 20px; /* Add padding for spacing */
+    text-align: center; /* Center the navigation links */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+	margin: 0;
+    position: fixed; /* Fixed position to keep it at the top */
+    top: 0; /* Place it at the top */
+    width: 82.73%; /* Make it span the full width of the page */
+    z-index: 1000; /* Ensure it stays on top */
+    display: flex; /* Use flexbox layout */
+    justify-content: center; /* Space between elements in the navigation bar */
+    align-items: center; /* Center items vertically */
+}
+
+/* Logo styling */
+nav .logo {
+    width: 150px; /* Adjust logo width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 0px; /* Margin to separate logo from links */
+	margin-left: 20px;
+}
+
+/* Navigation Links */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px; /* Add spacing between links */
+    font-size: 18px;
+    border-radius: 5px; /* Rounded corners for links */
+    padding: 10px;
+}
+
+/* Hover effect */
+nav a:hover {
+    background-color: #9B1B1B; /* Darker maroon on hover */
+    transform: scale(1.3); /* Enlarge text size on hover */
+}
+/* Style the buttons */
+.spec-button {
+  display: inline-block; /* Display buttons inline */
+  padding: 10px 20px; /* Adjust padding for buttons */
+  background-color: #A24857; /* Blue background color */
+  color: white; /* White text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Adjust font size */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Indicate clickable buttons */
+  margin: 10px; /* Add spacing between buttons */
+}
+
+/* Hover effect for buttons */
+.spec-button:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  color: #f1f1f1; /* White text on hover */
+}
+
+/* Hover effect */
+nav select:hover,
+nav a:hover {
+  transform: scale(1.3); /* Enlarge button on hover */
+}
+
+/* Center buttons horizontally */
+nav {
+  text-align: center; /* Align buttons horizontally */
+}
+
+/* Main content */
+main {
+    padding: 100px 20px; /* Increased padding for more white space */
+    flex-grow: 1;
+    box-sizing: border-box;
+    font-size: 18px; /* Increased font size */
+    background-color: #f8f8f8; /* Light gray background for main content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer */
+footer {
+    background-color: #800000; /* Maroon color */
+    color: white;
+    text-align: center;
+    padding: 10px 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 16px;
+    border-top: 1px solid #8B0000; /* Subtle border to separate footer */
+}
+
+* {box-sizing:border-box}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: ""
+  clear: both;
+  display: table;
+}
+
+.zoom {
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.zoom:hover img {
+    transform: scale(1.2);
+}
+
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.text {
+    text-align: center; /* Center-align the text */
+    margin-top: 10px; /* Add some top margin for spacing */
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+a:hover {
+  background-color: #ddd;
+  color: White;
+}
+
+table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+			text-align: center; /* Aligning column names in center */
+            background-color: #f2f2f2;
+        }
+		.additional-info {
+            display: none;
+        }
+        .additional-info.show {
+            display: block;
+        }
+
+toggle-button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .toggle-button:hover {
+            background-color: #45a049;
+        }
+
+.text {
+        margin-bottom: 20px; /* Adjust this value as needed */
+    }
+	

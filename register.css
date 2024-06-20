@@ -1,0 +1,116 @@
+    body {
+	background-image: url('bgnew.jpg'); /* Specify the image path */
+    background-size: cover; /* Cover the entire body with the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-position: center; /* Center the image */
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+	  font-family: 'Roboto';
+    }
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .login-fields {
+      display: none; /* Hide the login fields by default */
+    }
+
+    /* Toggle Switch Styles */
+    .toggle-switch {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .toggle-switch input { 
+      display: none;
+    }
+
+    .toggle-switch label {
+      display: inline-block;
+      width: 175px;
+      height: 34px;
+      background-color: #ccc;
+      border-radius: 34px;
+      position: relative;
+      cursor: pointer;
+      text-align: center;
+      line-height: 34px;
+      padding: 4px; /* Adjust padding to center the switch */
+      transition: background-color 0.4s;
+    }
+
+    .toggle-switch label:before {
+      content: "";
+      position: absolute;
+      width: 60px;
+      height: 34px;
+      background-color: white;
+      border-radius: 34px;
+      left: 0;
+      transition: 0.4s;
+      z-index: -1; /* Push it behind the label */
+    }
+
+    .toggle-switch input:checked + label:before {
+      transform: translateX(60px);
+    }
+
+    .toggle-switch input:checked + label {
+      background-color: #2196F3; /* Change color for login state */
+    }
+
+    .toggle-switch input:not(:checked) + label {
+      background-color: #8a2be2; /* Change color for register state */
+    }
+
+    /* Show the dropdown menu on hover */
+    .toggle-switch input:not(:checked) + label:hover:before {
+      transform: translateX(60px);
+    }
