@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="manipulation.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="admin.html">
+            <img src="logo1.png" alt="Logo" class="logo" width="50" height="50"
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+		<a href="admin.html">Dashboard</a>
+        <a href="vehiclespecadmin.html">Vehicle Specifications</a>
+        <a href="keyinfoadmin.html">Key Information</a>
+        <a href="contactadmin.html">Contact Us</a>
+        <a href="listings.html">Listing</a>
+		<a href="managemembers.html">Manage Member</a>
+		<a href="managequotes.html">Quote</a>
+        <a href="index.html" onclick="logout()">Log Out</a>
+        </div>
+    </nav>
+	   
+    <div class="container">
+
+
+
+    <main>
+      <h2>Vehicle Specifications</h2>
+	  
+      <p>This is the main content area for viewing and managing vehicle specifications.</p>
+
+      <div class="button-container"> 
+	    <a href="carpriceadmin.html" class="spec-button"> Car Price List</a>
+        <a href="vanpriceadmin.html" class="spec-button"> Van Price List</a>
+		<a href="lowcreditDealsadmin.html" class="spec-button">Low Credit Deals</a>
+		<a href="monthadmin.html" class="spec-button">12 Month Business Deals</a>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2024 Admin Dashboard. All rights reserved.
+  </footer>
+<script>
+    function logout() {
+        alert("You have been logged out.");
+        window.location.href = "dashboard.html"; // Redirect to login page
+    }
+	</script>
+</body>
+
+</html>

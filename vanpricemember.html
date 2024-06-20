@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Member Van Price List</title>
+    <link rel="stylesheet" href="vehiclestyle.css">
+</head>
+<body>
+    <nav>
+	 <!-- Logo image -->
+       <img src="logo1.png" alt="Logo" class="logo" width="500" height="500">
+	   
+        <a href="dashboardmember.html">Home</a> 
+		<a href="vehiclespecmember.html">Vehicle Specifications</a>
+	  <a href="carpricemember.html">Car Price List</a> 
+	  <a href="vanpricemember.html">Van Price List</a> 
+	  <a href="lowcreditDealsmember.html">Low Credit Deals</a> 
+	  <a href="monthmember.html">12 Month Business Deals</a> 
+    </nav>
+
+    <main>
+        <!-- Main content -->
+        <h2>Van Price List</h2>
+		<table>
+            <tr>
+                <center><th>Van Model</center></th>
+                <th>Description</th>
+                <th>Components</th>
+            </tr>
+            <tr>
+				<td><img class="car-image" src="ford transit.png" alt="Ford"></td>
+                <td>
+                    <center><strong>Ford Transit Custom Crew Bus</strong></center><br>
+                    <center>Ford Transit Custom 280 L1 Diesel<br>
+                    Fwd 2.0 EcoBlue 136ps H1 Van Limited (136bhp)<br>
+                    <strong>$497.14</strong> per month including VAT<center>
+                </td>
+                <td>
+                    <button class="toggle-button">Components</button>
+                    <div class="additional-info">
+                        <p>Petrol fuel</p>
+                        <p>Automatic gearbox</p>
+                        <p>Non-metallic paint</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                
+				<td><img class="car-image" src="fors transit courier.png" alt="Ford Transit"></td>
+                <td>
+                    <center><strong>Ford Transit Courier Petrol</strong></center><br>
+                    <center>Ford Transit Courier Petrol 1.0<br>
+                    EcoBoost 125ps Limited Van<br>
+                    <strong>$534</strong> per month including VAT<center>
+                </td>
+                <td>
+                    <button class="toggle-button">Components</button>
+                    <div class="additional-info">
+                        <p>Electric fuel</p>
+                        <p>Automatic gearbox</p>
+                        <p>Metallic paint</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                
+				<td><img class="car-image" src="vwidbuzz.png" alt="VW ID Buzz"></td>
+                <td>
+                    <center><strong>VW ID Buzz</strong></center><br>
+                    <center>150kW Style Pro 77kWh Estate 5dr<br>
+                    EcoBoost 125ps Limited Van<br>
+					Electric Automatic(Brand New)<br>
+                    <strong>$630</strong> per month including VAT<center>
+                </td>
+                <td>
+                    <button class="toggle-button">Components</button>
+                    <div class="additional-info">
+                        <p>Petrol fuel</p>
+                        <p>Automatic gearbox</p>
+                        <p>Metallic paint</p>
+                    </div>
+                </td>
+            </tr>
+
+        </table>
+    </main>
+
+    <footer>
+        &copy; 2024 Member Dashboard. All rights reserved.
+    </footer>
+
+    <script>
+         // JavaScript code to toggle additional information
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Find the parent table row
+                const row = this.parentNode.parentNode;
+                // Find the additional info div within the row
+                const additionalInfo = row.querySelector('.additional-info');
+                // Toggle the 'show' class to display or hide additional info
+                additionalInfo.classList.toggle('show');
+                // Change button text based on visibility
+                this.textContent = additionalInfo.classList.contains('show') ? 'Show Less' : 'Components';
+            });
+        });
+    </script>
+</body>
+</html>

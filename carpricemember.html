@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Member Car Price List</title>
+    <link rel="stylesheet" href="vehiclestyle.css">
+</head>
+
+</head>
+
+<body>
+    <nav>
+	  <!-- Logo image -->
+       <img src="logo1.png" alt="Logo" class="logo" width="500" height="500">
+
+        <a href="dashboardmember.html">Home</a> 
+		<a href="vehiclespecmember.html">Vehicle Specifications</a>
+	  <a href="carpricemember.html">Car Price List</a> 
+	  <a href="vanpricemember.html">Van Price List</a> 
+	  <a href="lowcreditDealsmember.html">Low Credit Deals</a> 
+	  <a href="monthmember.html">12 Month Business Deals</a> 
+    </nav>
+
+    
+    <main>
+        <!-- Main content -->
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <h2>Car Price List</h2>
+        <table>
+            <tr>
+                <th>Car Model</th>
+                <th>Description</th>
+                <th>Components</th>
+            </tr>
+            <tr>
+                <td><img class="car-image" src="ibiza.png" alt="Ibiza"></td>
+                <td>
+                    <center><strong>Seat Ibiza</strong></center><br>
+                    <center>1.0 TSI FR (95bhp) Hatchback 5dr<br>
+                    Petrol Manual (95bhp)<br>
+                    <strong>$248</strong> per month including VAT<center>
+                </td>
+                <td>
+                    <button class="toggle-button">Components</button>
+                    <div class="additional-info">
+                        <p>Petrol fuel</p>
+                        <p>Manual gearbox</p>
+                        <p>Metallic paint</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><img class="car-image" src="audietron.png" alt="Audietron"></td>
+                <td>
+                    <center><strong>Audi E Tron GT Saloon</strong></center><br>
+                    <center>390kW 93kWh Quattro (530bhp)<br>
+                    <strong>$983</strong> per month including VAT</center>
+                </td>
+                <td>
+                    <button class="toggle-button">Components</button>
+                    <div class="additional-info">
+                        <p>Electric fuel</p>
+                        <p>Automatic gearbox</p>
+                        <p>Metallic paint</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><img class="car-image" src="vw1.png" alt="VW Touareg"></td>
+                <td>
+                    <center><strong>VW Touareg</strong></center><br>
+                    <center>3.0 V6 TDI 4Motion Black Edition<br>
+                    <strong>$720</strong> per month including VAT,</center>
+                </td>
+                <td>
+                    <button class="toggle-button">Components</button>
+                    <div class="additional-info">
+                        <p>Diesel fuel</p>
+                        <p>Automatic gearbox</p>
+                        <p>Non-metallic paint</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><img class="car-image" src="skodakamiq.png" alt="Skoda Kamiq"></td>
+                <td>
+                    <center><strong>Skoda Kamiq</strong></center><br>
+                    <center>1.0 TSI SE (95bhp) Hatchback 5dr<br>
+					Petrol Manual<br>
+                    <strong>$282</strong> per month including VAT</center>
+                </td>
+                <td>
+                    <button class="toggle-button">Components</button>
+                    <div class="additional-info">
+                        <p>Petrol fuel</p>
+                        <p>Manual gearbox</p>
+                        <p>Metallic paint</p>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </main>
+
+    <footer>
+        &copy; 2024 Member Dashboard. All rights reserved.
+    </footer>
+
+    <script>
+         // JavaScript code to toggle additional information
+        document.querySelectorAll('.toggle-button').forEach(button => {
+            button.addEventListener('click', function() {
+                // Find the parent table row
+                const row = this.parentNode.parentNode;
+                // Find the additional info div within the row
+                const additionalInfo = row.querySelector('.additional-info');
+                // Toggle the 'show' class to display or hide additional info
+                additionalInfo.classList.toggle('show');
+                // Change button text based on visibility
+                this.textContent = additionalInfo.classList.contains('show') ? 'Show Less' : 'Components';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="manipulation.css">
+    <style>
+        .clock-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .clock {
+            font-size: 2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="admin.html">
+            <img src="logo1.png" alt="Logo" class="logo" width="50" height="50">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <a href="admin.html">Dashboard</a>
+            <a href="vehiclespecadmin.html">Vehicle Specifications</a>
+            <a href="keyinfoadmin.html">Key Information</a>
+            <a href="contactadmin.html">Contact Us</a>
+            <a href="listings.html">Listing</a>
+            <a href="managemembers.html">Manage Member</a>
+            <a href="managequotes.html">Quote</a>
+            <a href="index.html" onclick="logout()">Log Out</a>
+        </div>
+    </nav>
+
+    <main>
+        <br><br><br>
+        <h2>Welcome Back, Admin!</h2>
+        <p>Check out your latest updates!</p>
+        <img src="ling.png" alt="Car 1" height="100" width="100">
+        <div class="button-container">
+            <a href="listings.html" class="btn btn-primary spec-button">Listing</a>
+            <a href="managemembers.html" class="btn btn-secondary spec-button">Manage Members</a>
+            <a href="managequotes.html" class="btn btn-success spec-button">Manage Quotes</a>
+        </div>
+        <div class="clock-container">
+            <h3>Current Time (Malaysia Time)</h3>
+            <div id="clock" class="clock">00:00:00</div>
+        </div>
+    </main>
+</div>
+
+<script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
+<script src="js/anime.min.js"></script>
+<script src="js/scripting.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data.min.js"></script>
+<script>
+    function logout() {
+        alert("You have been logged out.");
+        window.location.href = "dashboard.html"; // Redirect to login page
+    }
+
+    // Update the clock with current Malaysia time
+    function updateClock() {
+        const now = moment().tz("Asia/Kuala_Lumpur");
+        const hours = now.format('HH');
+        const minutes = now.format('mm');
+        const seconds = now.format('ss');
+        document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+    }
+
+    // Initial call to updateClock and then update every second
+    updateClock(); // Display immediately on page load
+    setInterval(updateClock, 1000); // Update every second
+</script>
+</body>
+<footer>
+    &copy; 2024 Admin Dashboard. All rights reserved.
+</footer>
+</html>

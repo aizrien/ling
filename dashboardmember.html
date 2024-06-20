@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard</title>
+    <link rel="stylesheet" href="keyinfo.css"> <!-- Link to keyinfo.css -->
+</head>
+
+<body>
+
+    <!-- Navigation Bar at the top -->
+    <nav>
+        <!-- Logo image -->
+        <img src="logo1.png" alt="Logo" class="logo" width="500" height="500">
+
+        <!-- Links for direct navigation -->
+        <a href="dashboardmember.html">Dashboard</a>
+        <a href="vehiclespecmember.html">Vehicle Specifications</a>
+        <a href="keyinfomember.html">Key Information</a>
+        <a href="contactmember.html">Contact Us</a>
+        <a href="quote.html">Order Now!</a>
+        <a href="notification.html">Notifications</a>
+        <a href="profile.php">Account Profile</a>
+        <a href="inbox.html">Inbox</a>
+        <a href="index.html" onclick="logout()">Log Out</a>
+    </nav>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Main content -->
+        <main>
+            <h2>
+                <br><br><br><br><br><br><br>Welcome to the Dashboard</h2>
+            <p> Ling's Cars has something for everyone. Let us help you find your <strong> dream car </strong> today! 
+            <br>We live inside our car leasing website all day Monday to Friday 9am-6pm. <br>
+            We are <strong> LINGsCARS.com</strong>, accept no subs!</p>
+            
+            <!-- Slideshow -->
+            <div class="slideshow-container">
+			<center>
+                <div class="slide fade" style="display: block;">
+                    <img src="ling.png" alt="Car 1" height= "300" width ="300">
+                </div>
+                <div class="slide fade">
+                    <img src="ling3.gif" alt="Car 2" height= "300" width ="300">
+                </div>
+                <div class="slide fade">
+                    <img src="ling3.jpg" alt="Car 3" height= "300" width ="300">
+                </div>
+
+                <!-- Dots -->
+                <div class="dots" id="dots">
+                    <span class="dot" onclick="setSlide(0)"></span>
+                    <span class="dot" onclick="setSlide(1)"></span>
+                    <span class="dot" onclick="setSlide(2)"></span>
+                </div>
+            </div>
+			</center>
+			
+            <p> Ling's Cars offers easy online leasing options, transparent pricing, and the latest deals and promotions!</p>
+            <p><br><br><br><br><br><br><br><br><br><br></p>
+            <!-- Add your content here -->
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Member Dashboard. All rights reserved.
+    </footer>
+
+    <!-- JavaScript to handle dropdown navigation -->
+    <script>
+        function navigateToCategory(selectElement) {
+            // Get the selected category
+            var selectedCategory = selectElement.value;
+
+            // Redirect to the selected category
+            window.location.hash = selectedCategory;
+        }
+    </script>
+	
+	<!-- JavaScript for logout -->
+    <script>
+        function logout() {
+            // Display a pop-up message
+            alert("You have been logged out.");
+        }
+    </script>
+
+    <!-- JavaScript for slideshow -->
+    <script src="scripts.js"></script>
+</body>
+
+</html>

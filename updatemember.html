@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="newadmin.css">
+</head>
+<body>
+    <nav>
+        <img src="logo1.png" alt="Logo" class="logo" width="500" height="500">
+        <a href="admin.html">Dashboard</a>
+        <a href="managemembers.html">Manage Member</a>
+        <a href="updatemember.html">Update Member</a>
+        <a href="deletemember.html">Delete Member</a>
+        <a href="displaymember.php">Display Member</a>
+        <a href="dashboard.html">Log Out</a>
+    </nav>
+
+    <div class="container">
+        <!-- Main content -->
+        <main>
+            <h1>Update Member Details</h1>
+            <form action="update_member.php" method="POST">
+                <fieldset>
+                    <br>
+                    <label for="adminID">Administrator ID</label>
+                    <input type="text" id="adminID" name="adminID" placeholder="Enter administrator ID" required>
+                    <label for="memberID">Member ID:</label>
+                    <input type="text" id="memberID" name="memberID" placeholder="Enter member ID" required><br><br>
+                    <label for="attribute">Select Attribute to Update:</label>
+                    <select id="attribute" name="attribute">
+                        <option value="emailMember">Member Email</option>
+                        <option value="passMember">Member Password</option>
+                    </select><br><br>
+                    <label for="newValue">New Value:</label>
+                    <input type="text" id="newValue" name="newValue" placeholder="Enter new value" required><br><br>
+                    <div style="text-align: center;"> <!-- Center the submit button -->
+                        <input type="submit" value="Submit">
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+    </div>
+
+    <style>
+        input[type="submit"] {
+            background-color: #4CAF50; /* Background color */
+            color: white; /* Text color */
+            padding: 12px 20px; /* Padding */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Cursor style */
+            font-size: 16px; /* Font size */
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Change background color on hover */
+        }
+    </style>
+
+    <footer>
+        &copy; 2024 Admin Dashboard. All rights reserved.
+    </footer>
+
+    <script>
+        function logout() {
+            // Display a pop-up message
+            alert("You have been logged out.");
+        }
+        function navigateToCategory(selectElement) {
+            // Get the selected category
+            var selectedCategory = selectElement.value;
+            // Redirect to the selected category
+            window.location.hash = selectedCategory;
+        }
+    </script>
+</body>
+</html>

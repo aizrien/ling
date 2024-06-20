@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Member</title>
+    <link rel="stylesheet" href="newadmin.css">
+    <style>
+        .container {
+            padding: 20px;
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: auto;
+        }
+        input[type=text], input[type=password], input[type=email] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0 20px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        label {
+            margin-bottom: 10px;
+            display: block;
+        }
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .col-50 {
+            flex: 0 0 48%;
+        }
+        .icon-container i {
+            margin-right: 10px;
+        }
+        .btn {
+            background-color: maroon;
+            color: white;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 17px;
+        }
+        .btn:hover {
+            background-color: #800000;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <img src="logo1.png" alt="Logo" class="logo" width="500" height="500">
+        <a href="admin.html">Dashboard</a>
+        <a href="managemembers.html">Manage Members</a>
+        <a href="addmembers.html">Add Member</a>
+        <a href="updatemember.html">Update Member</a>
+        <a href="deletemember.html">Delete Member</a>
+        <a href="displaymember.php">Display Members</a>
+        <a href="dashboard.html" onclick="logout()">Log Out</a>
+    </nav>
+
+    <div class="container">
+	<br><br><br><br><br>
+    <br> <br><br><br><br><br><br><br><br>   <h1>Create Member</h1>
+        <form name="myForm" action="checkout.php" method="post" onsubmit="return validate();">
+            <div class="row">
+                <div class="col-50">
+                    <h3>Billing Address</h3>
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="John" required>
+
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="M. Doe" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+
+                    <label for="adr">Address</label>
+                    <input type="text" id="adr" name="address" placeholder="No. 23, Lot 8745 (SL23), Lorong Matang Jaya" required>
+
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Kuching" required>
+
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" placeholder="Sarawak" required>
+                </div>
+
+                <div class="col-50">
+                    <h3>Payment</h3>
+                    <label for="fname">Accepted Cards</label>
+                    <div class="icon-container">
+                        <i class="fab fa-cc-visa" style="color: navy;"></i>
+                        <i class="fab fa-cc-amex" style="color: blue;"></i>
+                        <i class="fab fa-cc-mastercard" style="color: red;"></i>
+                        <i class="fab fa-cc-discover" style="color: orange;"></i>
+                    </div>
+                    <label for="cardname">Name on Card</label>
+                    <input type="text" id="cardname" name="cardname" placeholder="John More Doe" required>
+
+                    <label for="cardnumber">Credit card number</label>
+                    <input type="text" id="cardnumber" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+
+                    <label for="expmonth">Exp Month</label>
+                    <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
+
+                    <div class="row">
+                        <div class="col-50">
+                            <label for="expyear">Exp Year</label>
+                            <input type="text" id="expyear" name="expyear" placeholder="2022" required>
+                        </div>
+                        <div class="col-50">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cardcvv" placeholder="XXX" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <label>
+                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+            </label>
+
+            <input type="submit" value="Continue and Print receipt" class="btn">
+        </form>
+    </div>
+
+    <footer>
+        &copy; 2024 Admin Dashboard. All rights reserved.
+    </footer>
+
+    <script>
+        function logout() {
+            alert("You have been logged out.");
+        }
+        function validate() {
+            // Add your form validation logic here
+            return true; // Return false to prevent form submission
+        }
+    </script>
+</body>
+</html>

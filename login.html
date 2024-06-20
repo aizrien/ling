@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="login.css">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+
+</head>
+<body>
+
+<div class="login-container">
+
+  <h1>Login</h1>
+	<form id="loginForm">
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+	<button type="submit">Login</button> 
+	
+  </form>
+</div>
+
+<script>
+document.getElementById("loginForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+  
+  // Get the values entered by the user
+  var username = document.getElementById("username").value.trim();
+  var password = document.getElementById("password").value.trim();
+  
+  // Check if the username and password match the specified values
+  if (username === "lingscars@admin.com" && password === "lingling") {
+    // If the credentials are correct, redirect to admin.html
+    window.location.href = "admin.html";
+	alert('You are logged in as admin.');
+  } else {
+    // If the credentials are incorrect, redirect to dashboard.html
+    window.location.href = "dashboardmember.html";
+	alert('You are logged in as registered member.');
+  }
+});
+</script>
+
+
+
+</body>
+</html>

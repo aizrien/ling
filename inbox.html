@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inbox</title>
+    <link rel="stylesheet" href="keyinfo.css"> 
+    <style>
+        /* Additional styles specific to inbox */
+        main {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .message {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .message:hover {
+            transform: translateY(-5px);
+            background-color: #f0f0f0;
+        }
+
+        .message h2 {
+            color: #800000;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .message p {
+            color: #333;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .timestamp {
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <!-- Logo image -->
+        <img src="logo1.png" alt="Logo" class="logo" width="150">
+
+        <!-- Links for direct navigation -->
+        <a href="dashboardmember.html">Dashboard</a>
+        <a href="vehiclespecmember.html">Vehicle Specifications</a>
+        <a href="keyinfomember.html">Key Information</a>
+        <a href="contactmember.html">Contact Us</a>
+        <a href="quote.html">Order Now!</a>
+        <a href="notification.html">Notifications</a> 
+        <a href="profile.php">Account Profile</a>
+        <a href="inbox.html">Inbox</a>
+        <a href="index.html" onclick="logout()">Log Out</a>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        <h1><br><br><br>Inbox</h1>
+        <div class="message" onclick="window.location.href='message.html'">
+            <h2>New Message from Ling's Cars</h2>
+            <p>Hi there! You have received a new message regarding your recent inquiry. Please click to read more.</p>
+            <span class="timestamp">2 minutes ago</span>
+        </div>
+        <div class="message">
+            <h2>Feedback Request</h2>
+            <p>We value your opinion! Please take a moment to provide feedback on your recent service experience.</p>
+            <span class="timestamp">Yesterday</span>
+        </div>
+        <div class="message">
+            <h2>Important Update</h2>
+            <p>Due to scheduled maintenance, our website will be temporarily unavailable this weekend. We apologize for any inconvenience.</p>
+            <span class="timestamp">2 days ago</span>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Member Dashboard. All rights reserved.
+    </footer>
+
+    <!-- JavaScript to handle logout -->
+    <script>
+        function logout() {
+            alert("You have been logged out.");
+        }
+    </script>
+</body>
+</html>
+

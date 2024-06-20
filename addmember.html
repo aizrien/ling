@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Member</title>
+    <link rel="stylesheet" href="newadmin.css">
+
+</head>
+<body>
+    <nav>
+        <img src="logo1.png" alt="Logo" class="logo" width="500" height="500">
+        <a href="admin.html">Dashboard</a>
+        <a href="managemembers.html">Manage Members</a>
+        <a href="addmembers.html">Add Member</a>
+        <a href="updatemember.html">Update Member</a>
+        <a href="deletemember.html">Delete Member</a>
+        <a href="displaymember.php">Display Members</a>
+        <a href="dashboard.html" onclick="logout()">Log Out</a>
+    </nav>
+
+    <div class="container">
+        <!-- Main content -->
+        <main>
+            <h1>Create Member</h1>
+            <form action="add_member.php" method="POST">
+                <fieldset>
+                    <br>
+                    <label for="adminID">Administrator ID</label>
+                    <input type="text" id="adminID" name="adminID" placeholder="Enter administrator ID" required>
+                    
+                    <label for="emailMember">Member Email</label>
+                    <input type="email" id="emailMember" name="emailMember" placeholder="Enter member email" required>
+                    
+                    <label for="passMember">Member Password</label>
+                    <input type="password" id="passMember" name="passMember" placeholder="Enter member password" required>
+                  
+                    <div style="text-align: center;">
+                        <input type="submit" value="Submit">
+                    </div>
+                </fieldset>
+            </form>
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2024 Admin Dashboard. All rights reserved.
+    </footer>
+
+    <script>
+        function logout() {
+            alert("You have been logged out.");
+        }
+    </script>
+</body>
+</html>

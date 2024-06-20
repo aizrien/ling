@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Display Listings</title>
+    <link rel="stylesheet" href="adminlistings.css">
+</head>
+
+<body> <style>
+        /* Styles for table*/
+        .overlay {
+            position: fixed;
+            top: 50%; /* Set top position to center */
+            left: 50%; /* Set left position to center */
+            transform: translate(-50%, -50%); /* Center the element */
+            width: 75%;
+            height: 90%;
+            background-color: rgba(255, 255, 255, 2); /* Adjust the opacity as needed */
+            z-index: 999; /* Ensure it's above other elements */
+            border-radius: 20px; /* Set the border radius */
+        }
+
+        /* Styles for the table */
+        table {
+			top: 50%; /* Set top position to center */
+            left: 50%; /* Set left position to center */
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 100px; /* Adjust the spacing from the top */
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+			font-size: 12px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+			color: #333; /* Dark gray text color for header cells */
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+    <nav>
+        <img src="logo1.png" alt="Logo" class="logo" width="500" height="500">
+        <a href="listings.html">Listing</a>
+		<a href="admin.html">Dashboard</a>
+        <a href="addlistings.html">Add List</a>
+        <a href="updatelistings.html">Update List</a>
+        <a href="deletelistings.html">Delete List</a>
+		<a href="displaylistings.html" class="spec-button">Display Lists</a>
+        <a href="dashboard.html" onclick="logout()">Log Out</a>
+    </nav>
+
+    <div class="container">
+        <main>
+            <h1>All Vehicle Listings</h1>
+            <table>
+                <tr>
+                    <th>Vehicle ID</th>
+                    <th>Administrator ID</th>
+                    <th>Vehicle Type</th>
+                    <th>Vehicle Name</th>
+                    <th>Vehicle Brand</th>
+                    <th>Vehicle Model</th>
+                    <th>Vehicle Specs</th>
+                    <th>Vehicle Price</th>
+                </tr>
+                <?php include 'display_lists.php'; ?> <!-- Include the PHP script to fetch data -->
+            </table>
+        </main>
+    </div>
+</body>
+
+</html>

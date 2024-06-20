@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="manipulation.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="admin.html">
+            <img src="logo1.png" alt="Logo" class="logo" width="50" height="50"
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+		<a href="admin.html">Dashboard</a>
+        <a href="vehiclespecadmin.html">Vehicle Specifications</a>
+        <a href="keyinfoadmin.html">Key Information</a>
+        <a href="contactadmin.html">Contact Us</a>
+        <a href="listings.html">Listing</a>
+		<a href="managemembers.html">Manage Member</a>
+		<a href="managequotes.html">Quote</a>
+        <a href="index.html" onclick="logout()">Log Out</a>
+        </div>
+    </nav>
+    <main>
+      <h2>Key information</h2>
+      <p>This is the main content area for viewing and managing key information.
+	  Key information on a car dealership website includes essential details that potential customers need to know when considering purchasing a vehicle from Ling's Cars! </p>
+
+      <div class="button-container">
+	  <a href="howitworksadmin.html" class="spec-button">How It Works</a>
+      <a href="tipsadmin.html" class="spec-button">Tips and Hints</a>
+      <a href="faqadmin.html" class="spec-button">FAQ's</a>
+	  <a href="lingadmin.html" class="spec-button">About Ling</a>
+      </div>
+
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2024 Admin Dashboard. All rights reserved.
+  </footer>
+<script>
+    function logout() {
+        alert("You have been logged out.");
+        window.location.href = "dashboard.html"; // Redirect to login page
+    }
+	</script>
+</body>
+
+</html>

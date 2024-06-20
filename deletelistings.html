@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="newadmin.css">
+</head>
+<body>
+    <nav>
+        <img src="logo1.png" alt="Logo" class="logo" width="500" height="500">
+        <!-- Links for direct navigation -->
+		<a href="admin.html">Dashboard</a>
+        <a href="listings.html">Listing</a>
+        <a href="addlistings.html">Add List</a>
+        <a href="updatelistings.html">Update List</a>
+        <a href="deletelistings.html">Delete Lists</a>
+		<a href="display_lists.php" class="spec-button">Display Lists</a>
+        <a href="dashboard.html" onclick="logout()">Log Out</a>
+    </nav>
+
+    <div class="container">
+        <!-- Main content -->
+        <main>
+
+            <h1>Delete Vehicle Listing</h1>
+            <form action="delete_listings.php" method="POST">
+                <label for="adminID">Administrator ID</label>
+                <input type="text" id="adminID" name="adminID" placeholder="Enter administrator ID" required>
+                <label for="vehicleID">Vehicle ID:</label>
+                <input type="text" id="vehicleID" name="vehicleID" placeholder="Enter vehicle ID" required><br><br>
+                <div style="text-align: center;"> <!-- Center the submit button -->
+                    <input type="submit" value="Delete">
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <style>
+        input[type="submit"] {
+            background-color: #f44336; /* Background color */
+            color: white; /* Text color */
+            padding: 12px 20px; /* Padding */
+            border: none; /* Remove border */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Cursor style */
+            font-size: 16px; /* Font size */
+        }
+
+        input[type="submit"]:hover {
+            background-color: #d32f2f; /* Change background color on hover */
+        }
+    </style>
+	
+	 <footer>
+    &copy; 2024 Admin Dashboard. All rights reserved.
+  </footer>
+  
+		<script>
+    function logout() {
+        // Display a pop-up message
+        alert("You have been logged out.");
+    }
+	function navigateToCategory(selectElement) {
+            // Get the selected category
+            var selectedCategory = selectElement.value;
+
+            // Redirect to the selected category
+            window.location.hash = selectedCategory;
+        }
+	</script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="newadmin.css">
+</head>
+<body>
+    <nav>
+        <img src="logo1.png" alt="Logo" class="logo" width="500" height="500">
+        <!-- Links for direct navigation -->
+        <a href="admin.html">Dashboard</a>
+        <a href="vehiclespecadmin.html">Vehicle Specifications</a>
+        <a href="keyinfoadmin.html">Key Information</a>
+        <a href="contactadmin.html">Contact Us</a>
+        <a href="listings.html">Listing</a>
+		<a href="quote.html">Quote</a>
+        <a href="dashboard.html">Log Out</a>
+    </nav>
+    <div class="container">
+        <main> 
+		
+            <h1>Add a New Listing</h1>
+            <form action="add_listings.php" method="POST" enctype="multipart/form-data">
+               <fieldset>
+			   <br>
+                    <label for="adminID">Administrator ID</label>
+                    <input type="text" id="adminID" name="adminID" placeholder="Enter administrator ID" required>
+                    <label for="vehicleType">Choose a vehicle type to add:</label>
+                    <select id="vehicleType" name="vehicleType">
+                        <option value="car">Car</option>
+                        <option value="van">Van</option>
+                    </select>
+                    <br><br>
+                    <label for="vehicleName">Vehicle Name</label>
+                    <input type="text" id="vehicleName" name="vehicleName" placeholder="Enter vehicle name" required>
+                    <label for="vehicleBrand">Vehicle Brand</label>
+                    <input type="text" id="vehicleBrand" name="vehicleBrand" placeholder="Enter vehicle brand" required>
+                    <label for="vehicleModel">Vehicle Model</label>
+                    <input type="text" id="vehicleModel" name="vehicleModel" placeholder="Enter vehicle model" required>
+                    <label for="vehicleSpec">Vehicle Specs</label>
+                    <input type="text" id="vehicleSpec" name="vehicleSpec" placeholder="Enter vehicle specs" required>
+                    <label for="vehiclePrice">Vehicle Price</label>
+                    <input type="text" id="vehiclePrice" name="vehiclePrice" placeholder="Enter vehicle price" required>
+                    <div style="text-align: center;"> <!-- Center the submit button -->
+                        <input type="submit" value="Submit">
+                    </div>
+					
+                </fieldset>
+            </form>
+        </main>
+    </div>
+	
+	<style>
+	input[type="submit"] {
+    background-color: #4CAF50; /* Background color */
+    color: white; /* Text color */
+    padding: 12px 20px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor style */
+    font-size: 16px; /* Font size */
+	}
+
+	input[type="submit"]:hover {
+		background-color: #45a049; /* Change background color on hover */
+	}
+	</style>
+ <footer>
+    &copy; 2024 Admin Dashboard. All rights reserved.
+  </footer>
+  
+		<script>
+    function logout() {
+        // Display a pop-up message
+        alert("You have been logged out.");
+    }
+	function navigateToCategory(selectElement) {
+            // Get the selected category
+            var selectedCategory = selectElement.value;
+
+            // Redirect to the selected category
+            window.location.hash = selectedCategory;
+        }
+	</script>
+</body>
+</html>

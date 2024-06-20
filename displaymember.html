@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Display Listings</title>
+    <link rel="stylesheet" href="adminlistings.css">
+</head>
+
+<body>
+    <nav>
+        <img src="logo1.png" alt="Logo" class="logo" width="500" height="500">
+	<nav>
+        <img src="logo1.png" alt="Logo" class="logo" width="500" height="500">
+		<a href="admin.html">Dashboard</a>
+        <a href="managemembers.html">Manage Member</a>
+        <a href="updatemember.html">Update Member</a>
+        <a href="deletemember.html">Delete Member</a>
+        <a href="displaymember.php">Display Member</a>
+        <a href="dashboard.html">Log Out</a>
+    </nav>
+
+
+    <div class="container">
+        <main>
+            <h1>All Registered Member</h1>
+            <table>
+                <tr>
+                    <th>Member ID</th>
+                    <th>Member Email</th>
+                    <th>Member Password</th>
+                    
+                </tr>
+                <?php include 'displaymember.php'; ?> <!-- Include the PHP script to fetch data -->
+            </table>
+			
+			 <footer>
+				&copy; 2024 Admin Dashboard. All rights reserved.
+				</footer>
+        </main>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="manipulation.css">
+</head>
+<body>
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="admin.html">
+            <img src="logo1.png" alt="Logo" class="logo" width="50" height="50"
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+		<a href="admin.html">Dashboard</a>
+        <a href="vehiclespecadmin.html">Vehicle Specifications</a>
+        <a href="keyinfoadmin.html">Key Information</a>
+        <a href="contactadmin.html">Contact Us</a>
+        <a href="listings.html">Listing</a>
+		<a href="managemembers.html">Manage Member</a>
+		<a href="managequotes.html">Quote</a>
+        <a href="index.html" onclick="logout()">Log Out</a>
+        </div>
+    </nav>
+<!-- Main content -->
+<main>
+<br><br><br>
+    <h2>Contact Us</h2>
+	
+	<p>
+    <strong>Founder:</strong> Ling Valentine MSc IoD<br>
+    15 Riverside Studios<br>
+    Newcastle Business Park<br>
+    Newcastle upon Tyne, NE4 7YL<br><br>
+    <strong>Tel:</strong> 0191 460 9444<br>
+    <strong>Fax:</strong> 0870 486 1130<br><br>
+    <strong>VAT No:</strong> 866 0241 30<br>
+    <strong>Co Reg No:</strong> 6178634<br>
+    <strong>Consumer Credit Licence:</strong> 663330<br>
+    <strong>Data Protection No:</strong> Z1098490<br>
+    <strong>Best Before:</strong> 17/08/2007<br><br>
+	
+	<h3><em>- Visit us at our socials -</em></h3>
+	
+</p>
+
+	
+    <div class="button-container">
+        <a href="https://www.facebook.com/lingscars/" class="spec-button-fb" >
+            <img src="facebook.png" alt="Facebook" class="social-icon-fb" height="50" width ="50">
+        </a>
+        <a href="https://twitter.com/LINGsCARS" class="spec-button-x">
+            <img src="x.jpg" alt="x" class="social-icon" height= "50" width ="50">
+        </a>
+    </div>
+</main>
+		
+      </div>
+            <!-- Add your content here -->
+	
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Admin Dashboard. All rights reserved.
+    </footer>
+
+    <!-- JavaScript to handle dropdown navigation -->
+    <script>
+        function navigateToCategory(selectElement) {
+            // Get the selected category
+            var selectedCategory = selectElement.value;
+
+            // Redirect to the selected category
+            window.location.hash = selectedCategory;
+        }
+		 function logout() {
+        alert("You have been logged out.");
+        window.location.href = "dashboard.html"; // Redirect to login page
+    }
+    </script>
+</body>
+
+</html>

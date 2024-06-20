@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Monthly Quotes</title>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="manipulation.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</head>
+<body>
+    <nav>
+        <img src="logo1.png" alt="Logo" class="logo" width="50" height="50">
+        <a href="admin.html">Dashboard</a>
+        <a href="managequotes.html">Manage Quotes</a>
+        <a href="viewquotes.html">View Quotes</a>
+        <a href="generatereport.html">Generate Report</a>
+        <a href="index.html" onclick="logout()">Log Out</a>
+    </nav>
+
+    <div class="container">
+        <main>
+            <h1>Transactions Report</h1>
+            <div style="width: 50%; margin: auto;">
+                <canvas id="monthlyChart" width="400" height="300"></canvas>
+            </div>
+            <button id="downloadPDF" class="btn btn-primary mt-3">Download PDF</button>
+        </main>
+    </div>
+
+    <footer>
+        &copy; 2024 Admin Dashboard. All rights reserved.
+    </footer>
+
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: 'generatereport.php',
+                type: 'GET',
+                success: function(response) {
+                    var ctx = document.getElementById('monthlyChart').getContext('2d');
+                    var monthlyChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: response.labels,
+                            datasets: [{
+                                label: 'Number of Order',
+                                data: response.data,
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                borderColor: 'rgba(75, 192, 192, 1)',
+                                borderWidth: 1
+                            }]
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+
+            $('#downloadPDF').click(function() {
+                html2canvas(document.getElementById('monthlyChart')).then(canvas => {
+                    const imgData = canvas.toDataURL('image/png');
+                    const { jsPDF } = window.jspdf;
+                    const pdf = new jsPDF();
+                    pdf.addImage(imgData, 'PNG', 10, 10, 180, 150); // Adjust dimensions as needed
+                    pdf.save('monthly_report.pdf');
+                });
+            });
+        });
+				 function logout() {
+        alert("You have been logged out.");
+        window.location.href = "dashboard.html"; // Redirect to login page
+    }
+    </script>
+</body>
+</html>
